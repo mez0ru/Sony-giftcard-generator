@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Sony_giftcard_generator.AskMessage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Sony_giftcard_generator"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="200">
+
+    <Grid Margin="16">
+        <StackPanel Margin="16">
+            <TextBox x:Name="aaa" materialDesign:HintAssist.Hint="Enter the correct regular expression to find the missing serial codes" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                    Margin="0 8 0 0"
+                     FontSize="16"
+                 >
+            </TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Style="{StaticResource MaterialDesignFlatButton}"
+                                        IsDefault="True"
+                                        Margin="0 16 0 0"
+                                        Command="materialDesign:DialogHost.CloseDialogCommand" CommandParameter="{Binding Path=Text, ElementName=aaa}">
+
+                    ACCEPT
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
